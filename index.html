@@ -26,7 +26,7 @@ body {
     100% {background-position:0%}
 }
 
-/* FIXED PARTICLES (CLICK ISSUE SOLVED) */
+/* PARTICLES FIX */
 #particles-js {
     position: fixed;
     width: 100%;
@@ -45,7 +45,7 @@ body {
 }
 
 .text h1 { font-size: 40px; }
-.text span { color: #38bdf8; }
+.text span { color: #38bdf8; text-shadow: 0 0 10px cyan; }
 
 .btn {
     padding: 10px 20px;
@@ -54,7 +54,11 @@ body {
     border-radius: 20px;
     color: black;
     cursor: pointer;
-    margin-top: 10px;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px cyan;
+    transform: scale(1.05);
 }
 
 /* PROFILE */
@@ -65,15 +69,13 @@ body {
     box-shadow: 0 0 20px cyan;
 }
 
-/* SOCIAL (FIXED CLICKABLE) */
+/* SOCIAL */
 .social a {
     margin: 10px;
     font-size: 24px;
     color: #38bdf8;
     text-decoration: none;
     display: inline-block;
-    position: relative;
-    z-index: 10;
 }
 
 .social a:hover {
@@ -96,11 +98,12 @@ body {
     border-radius: 15px;
     padding: 20px;
     transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,255,255,0.2);
 }
 
 .box:hover, .card:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 25px cyan;
+    box-shadow: 0 0 30px cyan;
 }
 
 /* SECTION */
@@ -111,6 +114,7 @@ section {
 
 h2 {
     color: #38bdf8;
+    text-shadow: 0 0 10px cyan;
 }
 
 /* TYPING */
@@ -125,6 +129,12 @@ h2 {
 @keyframes typing {
     from { width: 0 }
     to { width: 260px }
+}
+
+/* VIDEO */
+iframe {
+    border-radius: 15px;
+    box-shadow: 0 0 20px cyan;
 }
 
 img {
@@ -157,11 +167,9 @@ img {
             <a href="https://www.linkedin.com/in/shivrajeshwar-mayanale-1279212a4" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
-
             <a href="https://github.com/shivrajM43" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-
             <a href="https://www.youtube.com/channel/UCDrGfbyxDHfiXM7C8rIyGqg" target="_blank">
                 <i class="fab fa-youtube"></i>
             </a>
@@ -188,19 +196,28 @@ img {
 <section data-aos="fade-up">
     <h2>Achievements</h2>
     <div class="grid">
-        <div class="card">🥇 1st Prize – SPPU Zonal Competition</div>
+        <div class="card">🥇 1st Prize – SPPU Zonal Level Competition</div>
         <div class="card">🥈 2nd Runner Up – National Competition</div>
         <div class="card">🤖 Blender Robot Design</div>
-        <div class="card">⚡ Electrical System Development</div>
+        <div class="card">⚡ Electrical & Hardware Development</div>
     </div>
 </section>
 
-<!-- PROJECT -->
+<!-- PROJECT + VIDEO -->
 <section data-aos="fade-left">
-    <h2>Project</h2>
+    <h2>Underwater Welding Robot</h2>
+
     <div class="card">
-        🤖 Underwater Welding Robot <br><br>
-        Designed + Electrical + Model Development
+        🤖 Designed using Blender + Electrical + Hardware <br><br>
+        🏆 SPPU Winner | 🥈 National Runner Up
+    </div>
+
+    <br>
+
+    <div class="card">
+        <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/UCDrGfbyxDHfiXM7C8rIyGqg"
+        allowfullscreen></iframe>
     </div>
 </section>
 
