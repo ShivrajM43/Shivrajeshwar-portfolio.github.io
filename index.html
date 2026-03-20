@@ -26,11 +26,13 @@ body {
     100% {background-position:0%}
 }
 
+/* FIXED PARTICLES (CLICK ISSUE SOLVED) */
 #particles-js {
     position: fixed;
     width: 100%;
     height: 100%;
     z-index: -1;
+    pointer-events: none;
 }
 
 /* HERO */
@@ -63,13 +65,15 @@ body {
     box-shadow: 0 0 20px cyan;
 }
 
-/* SOCIAL */
+/* SOCIAL (FIXED CLICKABLE) */
 .social a {
     margin: 10px;
-    font-size: 22px;
+    font-size: 24px;
     color: #38bdf8;
     text-decoration: none;
-    transition: 0.3s;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
 }
 
 .social a:hover {
@@ -184,24 +188,10 @@ img {
 <section data-aos="fade-up">
     <h2>Achievements</h2>
     <div class="grid">
-
-        <div class="card">
-        🥇 1st Prize – SPPU Zonal Level Competition <br>
-        Underwater Welding Robot
-        </div>
-
-        <div class="card">
-        🥈 2nd Runner Up – Kalpak National Level Competition
-        </div>
-
-        <div class="card">
-        🤖 Designed Robot using Blender Software
-        </div>
-
-        <div class="card">
-        ⚡ Electrical Work & Hardware Model Development
-        </div>
-
+        <div class="card">🥇 1st Prize – SPPU Zonal Competition</div>
+        <div class="card">🥈 2nd Runner Up – National Competition</div>
+        <div class="card">🤖 Blender Robot Design</div>
+        <div class="card">⚡ Electrical System Development</div>
     </div>
 </section>
 
@@ -210,27 +200,24 @@ img {
     <h2>Project</h2>
     <div class="card">
         🤖 Underwater Welding Robot <br><br>
-        Designed in Blender + Electrical System + Model Development
+        Designed + Electrical + Model Development
     </div>
 </section>
 
 <!-- CERTIFICATES -->
 <section data-aos="fade-up">
     <h2>Certificates</h2>
-
     <div class="grid">
         <div class="card">
             <a href="cert1.jpg" target="_blank">
                 <img src="cert1.jpg" width="100%">
             </a>
         </div>
-
         <div class="card">
             <a href="cert2.jpg" target="_blank">
                 <img src="cert2.jpg" width="100%">
             </a>
         </div>
-
         <div class="card">
             <a href="cert3.jpg" target="_blank">
                 <img src="cert3.jpg" width="100%">
@@ -249,9 +236,8 @@ img {
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer style="text-align:center; padding:20px; color:#94a3b8;">
-    © 2026 Shivrajeshwar Sanjay Mayanale 🤖
+    © 2026 Shivrajeshwar 🤖
 </footer>
 
 <!-- PARTICLES -->
