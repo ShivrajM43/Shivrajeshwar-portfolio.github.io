@@ -9,36 +9,21 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-
-/* GLOBAL */
 html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     color: white;
-    cursor: none;
     background: linear-gradient(-45deg, #020617, #0f172a, #1e293b, #020617);
     background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
+    animation: bg 10s infinite;
 }
 
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-/* CUSTOM CURSOR */
-.cursor {
-    position: fixed;
-    width: 15px;
-    height: 15px;
-    background: cyan;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 999;
-    box-shadow: 0 0 15px cyan;
+@keyframes bg {
+    0% {background-position:0%}
+    50% {background-position:100%}
+    100% {background-position:0%}
 }
 
 /* PARTICLES */
@@ -61,7 +46,6 @@ body {
 .text h1 { font-size: 40px; }
 .text span { color: #38bdf8; }
 
-/* BUTTON */
 .btn {
     padding: 10px 20px;
     background: #38bdf8;
@@ -69,6 +53,7 @@ body {
     border-radius: 20px;
     color: black;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 /* PROFILE */
@@ -86,6 +71,38 @@ body {
     color: #38bdf8;
 }
 
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+.box, .card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid cyan;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.box:hover, .card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px cyan;
+}
+
+/* SECTION */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    color: #38bdf8;
+}
+
 /* TYPING */
 .typing {
     border-right: 2px solid cyan;
@@ -100,58 +117,31 @@ body {
     to { width: 260px }
 }
 
-/* GLASS CARDS */
-.box, .achieve-card, .project-card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0,255,255,0.3);
-    border-radius: 15px;
-    transition: 0.3s;
-    padding: 20px;
+img {
+    border-radius: 10px;
 }
-
-/* HOVER */
-.box:hover, .achieve-card:hover, .project-card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 30px cyan;
-}
-
-/* SKILLS */
-.skills {
-    padding: 50px;
-    text-align: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-}
-
-/* ACHIEVEMENTS */
-.achievements {
-    padding: 50px;
-    text-align: center;
-}
-
-/* PROJECTS */
-.projects {
-    padding: 50px;
-    text-align: center;
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="cursor"></div>
 <div id="particles-js"></div>
 
+<!-- HERO -->
 <section class="hero" data-aos="fade-up">
     <div class="text">
-        <h1>Hi There, <br> I'm <span>Shivrajeshwar</span></h1>
+        <h1>Hi There, <br> I'm <span>Shivrajeshwar Sanjay Mayanale</span></h1>
         <p class="typing">Robotics & Automation Student</p>
+
+        <p>
+        📍 D.Y Patil College Of Engineering, Akurdi, Pune <br>
+        📧 shivrajeshwarm43@gmail.com <br>
+        📞 9130895127
+        </p>
+
+        <a href="resume.pdf" download>
+            <button class="btn">Download Resume</button>
+        </a>
 
         <div class="social">
             <i class="fab fa-linkedin"></i>
@@ -161,35 +151,94 @@ body {
     </div>
 
     <div class="profile" data-aos="zoom-in">
-        <img src="https://via.placeholder.com/220">
+        <img src="photo.jpg">
     </div>
 </section>
 
-<section class="skills" data-aos="fade-right">
+<!-- SKILLS -->
+<section data-aos="fade-right">
     <h2>Skills</h2>
     <div class="grid">
-        <div class="box" data-aos="flip-left">🤖 Robotics</div>
-        <div class="box" data-aos="flip-left">⚙️ Automation</div>
-        <div class="box" data-aos="flip-left">💻 Programming</div>
-        <div class="box" data-aos="flip-left">🐍 Python</div>
+        <div class="box">🤖 Robotics</div>
+        <div class="box">⚙️ Automation</div>
+        <div class="box">💻 Programming</div>
+        <div class="box">🐍 Python</div>
     </div>
 </section>
 
-<section class="achievements" data-aos="fade-up">
+<!-- ACHIEVEMENTS -->
+<section data-aos="fade-up">
     <h2>Achievements</h2>
     <div class="grid">
-        <div class="achieve-card" data-aos="zoom-in">🏆 Built Line Follower Robot</div>
-        <div class="achieve-card" data-aos="zoom-in">⚙️ Automation Project</div>
+
+        <div class="card">
+        🥇 1st Prize – SPPU Zonal Competition <br>
+        Underwater Welding Robot
+        </div>
+
+        <div class="card">
+        🥈 2nd Runner Up – Kalpak National Event
+        </div>
+
+        <div class="card">
+        🤖 Designed Robot using Blender
+        </div>
+
+        <div class="card">
+        ⚡ Electrical & Hardware Development
+        </div>
+
     </div>
 </section>
 
-<section class="projects" data-aos="fade-left">
-    <h2>Projects</h2>
-    <div class="grid">
-        <div class="project-card" data-aos="fade-up">🤖 Robot Project</div>
-        <div class="project-card" data-aos="fade-up">🧠 AI Project</div>
+<!-- PROJECT -->
+<section data-aos="fade-left">
+    <h2>Project</h2>
+    <div class="card">
+        🤖 Underwater Welding Robot <br><br>
+        Designed in Blender + Built hardware + Electrical system
     </div>
 </section>
+
+<!-- CERTIFICATES -->
+<section data-aos="fade-up">
+    <h2>Certificates</h2>
+
+    <div class="grid">
+        <div class="card">
+            <a href="cert1.jpg" target="_blank">
+                <img src="cert1.jpg" width="100%">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="cert2.jpg" target="_blank">
+                <img src="cert2.jpg" width="100%">
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="cert3.jpg" target="_blank">
+                <img src="cert3.jpg" width="100%">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section data-aos="fade-up">
+    <h2>Contact</h2>
+    <div class="card">
+        📧 shivrajeshwarm43@gmail.com <br><br>
+        📞 9130895127 <br><br>
+        📍 Pune, India
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:20px; color:#94a3b8;">
+    © 2026 Shivrajeshwar Sanjay Mayanale 🤖
+</footer>
 
 <!-- PARTICLES -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
@@ -207,16 +256,7 @@ particlesJS("particles-js", {
 <!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({ duration: 1000, once: true });
-</script>
-
-<!-- CURSOR -->
-<script>
-const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', e => {
-    cursor.style.top = e.clientY + 'px';
-    cursor.style.left = e.clientX + 'px';
-});
+AOS.init({ duration: 1000 });
 </script>
 
 </body>
